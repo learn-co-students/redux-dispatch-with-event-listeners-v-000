@@ -7,3 +7,19 @@ function changeState(state = {count: 0}, action){
         return state;
     }
   }
+
+function dispatch(action) {
+  state = changeState(state, action)
+  render()
+}
+
+let button = document.getElementById('button');
+
+button.addEventListener('click', function() {
+  dispatch({ type: 'INCREASE_COUNT' });
+});
+
+function render() {
+  document.getElementById('container').textContent = state.count
+}
+dispatch( {type: '@@INIT'} )
