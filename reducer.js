@@ -7,3 +7,22 @@ function changeState(state = {count: 0}, action){
         return state;
     }
   }
+
+  function dispatch(action) { 
+    state = changeState(state, action)
+    render()
+  }
+
+
+  function render() { 
+    let container = document.getElementById('container');
+    container.textContent = state.count;
+  }
+
+  dispatch({type: '@@INITT'})
+
+  let button = document.getElementById('button');
+
+  button.addEventListener('click', () => { 
+    dispatch({type: 'INCREASE_COUNT'});
+  })
