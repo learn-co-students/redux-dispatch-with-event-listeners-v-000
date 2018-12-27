@@ -1,22 +1,17 @@
 let state
 
-function changeState(state = {count: 0}, action){
+function reducer(state = {count: 0}, action) {
   switch (action.type) {
     case 'INCREASE_COUNT':
       return {count: state.count + 1}
     default:
-      return state;
+      return state
   }
 }
 
 function dispatch(action) {
-  state = changeState(state, action)
+  state = reducer(state, action)
   render()
-
-  let button = document.getElementById('button')
-  button.addEventListener('click', function() {
-    dispatch({type: 'INCREASE_COUNT'})
-  })
 }
 
 function render() {
@@ -25,3 +20,9 @@ function render() {
 }
 
 dispatch({type: '@@INIT'})
+
+let button = document.getElementById('button')
+
+button.addEventListener('click', function() {
+  dispatch({type: 'INCREASE_COUNT'})
+})
