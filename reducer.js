@@ -31,7 +31,6 @@ function render() {
   container.textContent = store.getState().count;
 };
 
-// dispatch({type: '@@INIT'})\
 
 let store = createStore(changeCount);
 store.dispatch({ type: '@@INIT' });
