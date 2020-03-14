@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/learn-co-curriculum/redux-dispatch-with-event-listeners/issues"
   },
-  "homepage": "https://github.com/learn-co-curriculum/redux-dispatch-with-event-listeners#readme"  
+  "homepage": "https://github.com/learn-co-curriculum/redux-dispatch-with-event-listeners#readme",
+  "dependencies": {
+    "mocha-multi": "^1.1.3"
+  }
 }
