@@ -26,4 +26,4 @@ button.addEventListener('click', () => {
   dispatch({type: 'INCREASE_COUNT'})
 })
 
-//
+//function
