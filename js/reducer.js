@@ -20,3 +20,9 @@ function dispatch(action){
   }
 
   dispatch({type: '@@INIT'})
+
+  let button = document.getElementById('button');
+     
+  button.addEventListener('click', () => {
+    dispatch({type: 'INCREASE_COUNT'})
+  })
