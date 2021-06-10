@@ -1,6 +1,7 @@
 // add code snippets from README
-let state = {count: 0}
- 
+//let state = {count: 0}
+let state;
+
 function reducer(state= {count: 0}, action){
  switch (action.type) {
    case 'INCREASE_COUNT':
@@ -21,7 +22,7 @@ function render(){
    }
 
 dispatch({type: '@@INIT'})
-
+//vanilla js
 let button = document.getElementById('button');
  
 button.addEventListener('click', () => {
